@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      #app {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      img {
+        padding: 0.2rem;
+        width: 250px;
+        height: 250px;
+      }
+
+      .block {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="items">
+        <img v-for="image in imagesSet1" :src="image" alt="" />
+      </div>
+      <div class="items">
+        <img v-for="image in imagesSet2" :src="image" alt="" />
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+
+        data: {
+          imagesSet1: [
+            'https://66.media.tumblr.com/dea60da6b05d1bd7236c8c5456ae7d77/tumblr_phg22nlQ1P1x15lmpo2_400.gif',
+            'https://66.media.tumblr.com/7ec3487cf9a7bdfd21525cda0bf1332e/tumblr_phg22nlQ1P1x15lmpo3_250.gif'
+          ],
+
+          imagesSet2: [
+            'https://66.media.tumblr.com/7ec3487cf9a7bdfd21525cda0bf1332e/tumblr_phg22nlQ1P1x15lmpo3_250.gif  ',
+            'https://66.media.tumblr.com/de1ef4e04bd349f569095dea23889bed/tumblr_phg22nlQ1P1x15lmpo4_250.gif'
+          ]
+        }
+      })
+    </script>
+  </body>
+</html>
